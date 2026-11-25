@@ -6,7 +6,7 @@ import pathlib
 WORD_LIMIT = 140
 BADGE = "wod4-invent-word-r4"
 
-data = pathlib.Path("entry.txt").read_text(encoding="utf-8").strip()
+data = (pathlib.Path(__file__).resolve().parent / "entry.txt").read_text(encoding="utf-8").strip()
 size = len(data)
 result = {"badge": BADGE, "size": size}
 
